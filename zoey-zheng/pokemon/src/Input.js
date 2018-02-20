@@ -14,7 +14,7 @@ class Input extends Component {
         ref={this.props.refProp}
         onChange={this.handleChange}
         type="text"
-        placeholder="Search Pokemon"
+        placeholder="search pokemon"
         required
       />
     );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style/App.css';
+import './style/index.css';
 import { Header } from './Header.js';
 import { Display } from './Display.js';
 import Input from './Input.js';
@@ -28,6 +28,10 @@ class App extends Component {
         let name = value.name;
         let img = value.sprites.front_default;
         this.setState({ name, img });
+      })
+      .catch(error => {
+        console.error(error);
+        alert('Opps, we could not find the Pokemon you were looking for :(');
       });
   };
 
@@ -40,17 +44,19 @@ class App extends Component {
       <div className="App">
         <Header title={'Gotta Fetch em all!'} />
         <Display img={this.state.img} name={this.state.name} />
-        <Input
-          refProp={input => {
-            this.textInput = input;
-          }}
-          updateInputValue={this.updateInputValue}
-        />
-        <Button
-          clearInput={this.clearInput}
-          inputValue={this.state.inputValue}
-          fetchData={this.fetchData}
-        />
+        <div className="SearchField">
+          <Input
+            refProp={input => {
+              this.textInput = input;
+            }}
+            updateInputValue={this.updateInputValue}
+          />
+          <Button
+            clearInput={this.clearInput}
+            inputValue={this.state.inputValue}
+            fetchData={this.fetchData}
+          />
+        </div>
       </div>
     );
   }
