@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display component tests renders display component 1`] = `
+<div>
+  <img
+    alt="pokemon"
+    src={undefined}
+  />
+  <p>
+     
+     
+  </p>
+</div>
+`;

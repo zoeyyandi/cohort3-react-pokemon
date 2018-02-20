@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input component tests renders input component 1`] = `
+<input
+  autoFocus={true}
+  className="inputBox"
+  onChange={[Function]}
+  placeholder="Search Pokemon"
+  required={true}
+  type="text"
+/>
+`;

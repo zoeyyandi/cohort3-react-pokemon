@@ -6,8 +6,8 @@ import Input from './Input.js';
 import { Button } from './Button.js';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       inputValue: null,
       name: 'pikachu',
