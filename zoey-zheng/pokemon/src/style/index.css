@@ -74,3 +74,18 @@ button:focus {
   box-shadow: 0 0 5px #fec300;
   border: 1px solid #fec300;
 }
+
+.pokeball {
+  max-width: 90px;
+  max-height: 90px;
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
