@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { updateInputValue } from './actions/index';
 
 class Input extends Component {
   handleChange = event => {
@@ -15,10 +17,13 @@ class Input extends Component {
         onChange={this.handleChange}
         type="text"
         placeholder="search pokemon"
-        required
       />
     );
   }
 }
 
-export default Input;
+const mapDispatchToProps = {
+  updateInputValue: updateInputValue
+};
+
+export default connect(null, mapDispatchToProps)(Input);
